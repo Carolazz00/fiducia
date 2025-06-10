@@ -15,45 +15,9 @@ let speed2 = 0.03; // 速度2
 function preload() {
   grafiche = [
     // 1
-    {
-      posizione: {
-        riga: 1,
-        colonna: 1,
-      },
-      sotto: {
-        svg: loadSVG("./assets/A-1.svg"),
-        angolo: -1,
-        
-      },
-      centro: {
-        svg: loadSVG("./assets/A-2.svg"),
-        angolo: 1,
-        
-      },
-      sopra: {
-        svg: loadSVG("./assets/A-3.svg"),
-        angolo: 2,
-        
-      },
-    },
-    {
-      posizione: {
-        riga: 1,
-        colonna: 2,
-      },
-      sotto: {
-        svg: loadSVG("./assets/B-1.svg"),
-        angolo: -1,
-      },
-      centro: {
-        svg: loadSVG("./assets/B-2.svg"),
-        angolo: 1,
-      },
-      sopra: {
-        svg: loadSVG("./assets/B-3.svg"),
-        angolo: 2,
-      },
-    },
+  
+    
+    
      {
       posizione: {
         riga: 1,
@@ -91,79 +55,10 @@ function preload() {
         angolo: 2,
       },
     },
-    {
-      posizione: {
-        riga: 2,
-        colonna: 2,
-      },
-      sotto: {
-        svg: loadSVG("./assets/C-1.svg"),
-        angolo: -1,
-      },
-      centro: {
-        svg: loadSVG("./assets/C-2.svg"),
-        angolo: 1,
-      },
-      sopra: {
-        svg: loadSVG("./assets/C-3.svg"),
-        angolo: 2,
-      },
-    },
-     {
-      posizione: {
-        riga: 2,
-        colonna: 3,
-      },
-      sotto: {
-        svg: loadSVG("./assets/B-1.svg"),
-        angolo: -1,
-      },
-      centro: {
-        svg: loadSVG("./assets/B-2.svg"),
-        angolo: 1,
-      },
-      sopra: {
-        svg: loadSVG("./assets/B-3.svg"),
-        angolo: 2,
-      },
-    },
+    
+   
     //3
-    {
-      posizione: {
-        riga: 3,
-        colonna: 1,
-      },
-      sotto: {
-        svg: loadSVG("./assets/C-1.svg"),
-        angolo: -1,
-      },
-      centro: {
-        svg: loadSVG("./assets/C-2.svg"),
-        angolo: 1,
-      },
-      sopra: {
-        svg: loadSVG("./assets/C-3.svg"),
-        angolo: 2,
-      },
-    },
-    {
-      posizione: {
-        riga: 3,
-        colonna: 2,
-      },
-      sotto: {
-        svg: loadSVG("./assets/A-1.svg"),
-        angolo: -1,
-      },
-      centro: {
-        svg: loadSVG("./assets/A-2.svg"),
-        angolo: 1,
-      },
-      sopra: {
-        svg: loadSVG("./assets/A-3.svg"),
-        angolo: 2,
-      },
-    },
+    
      {
       posizione: {
         riga: 3,
@@ -219,24 +114,7 @@ function preload() {
         angolo: 2,
       },
     },
-     {
-      posizione: {
-        riga: 4,
-        colonna: 3,
-      },
-      sotto: {
-        svg: loadSVG("./assets/C-1.svg"),
-        angolo: -1,
-      },
-      centro: {
-        svg: loadSVG("./assets/C-2.svg"),
-        angolo: 1,
-      },
-      sopra: {
-        svg: loadSVG("./assets/C-3.svg"),
-        angolo: 2,
-      },
-    },
+     
     
   ];
 
