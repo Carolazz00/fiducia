@@ -1,20 +1,13 @@
 let grafiche = [];
 let lettere=[]
-
 /** @type {Font} */
 let font;
-
-// 角度
 let angle1 = 0;
 let angle2 = 0;
-
-// 速度
-let speed1 = 0.01; // 速度1
-let speed2 = 0.03; // 速度2
-
+let speed1 = 0.01; 
+let speed2 = 0.03; 
 function preload() {
   grafiche = [
-    // 1
     {
       posizione: {
         riga: 1,
@@ -72,7 +65,6 @@ function preload() {
         angolo: 2,
       },
     },
-    //2
      {
       posizione: {
         riga: 2,
@@ -127,7 +119,6 @@ function preload() {
         angolo: 2,
       },
     },
-    //3
     {
       posizione: {
         riga: 3,
@@ -182,7 +173,6 @@ function preload() {
         angolo: 2,
       },
     },
-    //4
     {
       posizione: {
         riga: 4,
@@ -266,40 +256,32 @@ function draw() {
   angle2 += speed2;
 
   textFont(font);
-  textSize(80); // 可根据需要调整大小
+  textSize(80);
   fill("green");
   textAlign(CENTER, CENTER);
 
-  // 绘制字母
   for (let lettera of lettere) {
     let x = lettera.colonna * 100;
     let y = lettera.riga * 100;
     text(lettera.char, x, y);
   }
-
-  // 绘制图形
   for (let grafica of grafiche) {
     disegnaGrafica(grafica);
   }
 }
-
-
 function disegnaGrafica(grafica) {
   let x = grafica.posizione.colonna * 100;
   let y = grafica.posizione.riga * 100;
-
   push();
   translate(x, y);
   rotate(angle1 * grafica.sotto.angolo);
   image(grafica.sotto.svg, 0, 0, 120, 120);
   pop();
-
   push();
   translate(x, y);
   rotate(angle1 * grafica.centro.angolo);
   image(grafica.centro.svg, 0, 0, 120, 120);
   pop();
-
   push();
   translate(x, y);
   rotate(angle1 * grafica.sopra.angolo);
