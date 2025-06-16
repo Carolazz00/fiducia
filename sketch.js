@@ -241,24 +241,40 @@ function setup() {
 
 function draw() {
   let lettere = [
-  { char: "F", riga: 1,colonna: 1},
-  { char: "I", riga: 1,colonna: 2},
-  { char: "D",riga: 2 ,colonna: 2},
-  { char: "U", riga: 2,colonna: 3 },
-  { char: "C", riga: 3,colonna: 1 },
-  { char: "I", riga: 3,colonna: 2 },
-  { char: "A", riga: 4,colonna: 3,},
-];
+    { char: "F", riga: 1, colonna: 1 },
+    { char: "I", riga: 1, colonna: 3 },
+    { char: "D", riga: 2, colonna: 2 },
+    { char: "U", riga: 2, colonna: 3 },
+    { char: "C", riga: 3, colonna: 1 },
+    { char: "I", riga: 4, colonna: 2 },
+    { char: "A", riga: 4, colonna: 3 },
+  ];
+
   clear();
   background("white");
 
   angle1 += speed1;
   angle2 += speed2;
 
+  for (let grafica of grafiche) {
+    disegnaGrafica(grafica);  // 先画图形
+  }
+
+  // 再画文字，使其显示在图形上面
   textFont(font);
-  textSize(80);
-  fill("green");
+  textSize(120);
+  let fontColor = color("#6fb12f");
+fontColor.setAlpha(200); // 设置透明度
+fill(fontColor);
+  
   textAlign(CENTER, CENTER);
+
+  for (let lettera of lettere) {
+    let x = lettera.colonna * 100;
+    let y = lettera.riga * 100-9;
+    text(lettera.char, x, y);
+  }
+}
 
   for (let lettera of lettere) {
     let x = lettera.colonna * 100;
@@ -268,7 +284,7 @@ function draw() {
   for (let grafica of grafiche) {
     disegnaGrafica(grafica);
   }
-}
+
 function disegnaGrafica(grafica) {
   let x = grafica.posizione.colonna * 100;
   let y = grafica.posizione.riga * 100;
